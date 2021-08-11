@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Calling functions</title>
+    </head>
+
+    <body>
+
+        <script>
+            // var updateZipCode = function () {
+            //     console.log ( this ); // output --- > Window
+            // }
+            // updateZipCode();
+
+            // var updateZipCode = function () {
+            //     console.log ( this ); // output --- > {}
+            // }
+            // updateZipCode.call({});
+            
+            // var updateZipCode = function () {
+            //     console.log ( this ); // output --- > 
+            // }
+            // var zipCode = {
+            //     zip : '1343214'
+            // };
+            // //updateZipCode.call({zip: '122213412'});
+            // updateZipCode.call(zipCode)
+
+            var updateZipCode = function (newZip, country){
+                console.log(newZip + '                ' +country);
+            };
+            var zipCode = {
+                zip : '1343214'
+            };
+            //updateZipCode.call(zipCode,'2323','us');
+           updateZipCode.apply(zipCode,['111111','US']);
+        //    updateZipCode.apply(zipCode,'5323','US'); type error
+        </script>
+
+    </body>
+</html>

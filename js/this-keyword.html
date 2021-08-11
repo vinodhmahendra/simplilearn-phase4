@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Javascript this keyword</title>
+    </head>
+
+    <body>
+        <script>
+            // console.log(typeof this); //output --- > object
+            // console.log (this === window) ; // output -- > true
+
+            // var name = 'vinodh';
+            // // console.log ( name );
+            // console.log ( this.name );
+
+            // var updateSalary = function () {
+            //     console.log  ( this === window); // true
+            // }
+            // updateSalary();
+
+            // var employee = {
+            //     name: 'vinodh',
+            //     updateSalary: function () {
+            //         console.log (this); // object
+            //     }
+            // }
+            // employee.updateSalary();
+
+            // var employee = {
+            //     name: 'vinodh',
+            //     updateSalary: function () {
+            //         console.log(this === window); // false
+            //         var fn = function() {
+            //             console.log(this === window); //true
+            //         };
+            //         fn();
+            //     }
+            // };
+            // employee.updateSalary();
+
+            // constructor function
+            // var Address = function (line1) {
+            //     this.line1 = line1;
+            //     console.log(this); // output : Address
+            // }
+            // var addr = new Address ('5th main road');
+
+            var Address = function (line1) {
+                this.line1 = line1;
+            };
+            Address.prototype.updateZipCode = function () {
+                console.log (this); //output : Address
+            };
+            var addr = new Address ('5th main road');
+            addr.updateZipCode();
+
+
+        </script>
+    </body>
+
+</html>

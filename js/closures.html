@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>closures</title>
+    </head>
+
+    <body>
+        <script>
+            // var salaryUpdater = function ( salary ) {
+            //     var currentSalary = salary ;
+            //     var generator = function () {
+            //         currentSalary *= 2;
+            //         return currentSalary;
+            //     };
+            //     return generator;
+            // };
+
+            // var updateEn = salaryUpdater(50000);
+            // console.log(updateEn());
+
+            var salaryUpdater = function ( salary ) {
+                var currentSalary = salary ;
+                var generator = function () {
+                    currentSalary += 10000;
+                    return currentSalary;
+                };
+                return generator;
+            };
+            var updateEn = salaryUpdater(50000);
+            updateEn();
+            console.log(updateEn());
+        </script>
+    </body>
+</html>

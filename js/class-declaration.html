@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>ES6 class declation</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            class Person {
+                constructor (name) {
+                    this.name = name;
+                }
+                getName() {
+                    return this.name;
+                }
+            }
+
+            let vinodh = new Person('vinodh mahendra');
+
+            let name = vinodh.getName();
+            console.log(name);
+            
+            console.log(typeof Person);
+
+            console.log(vinodh instanceof Person);
+            console.log(vinodh instanceof Object);
+        </script>
+    </body>
+</html>

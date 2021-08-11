@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Immediately Invoke Function Expression (IIFE)</title>
+    </head>
+
+    <body>
+        <script>
+            // (function () {
+            //     console.log('Executed');
+            // })(); // valid
+
+            // (function () {
+            //     console.log('Executed');
+            // }()); // valid
+
+            // (function () {
+            //     var employeeName = 'vinodh';
+            // })();
+            // console.log(employeeName);
+
+            var app = {};
+
+            (function (ns) {
+                ns.name = 'None';
+            })(app);
+
+            console.log(app.name);
+        </script>
+    </body>
+</html>
